@@ -23,7 +23,6 @@ function updateSelectedCount() {
   //saving to local storage
   localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex));
 
-  console.log(seatsIndex);
   const selectedSeatsCount = selectedSeats.length;
 
   count.innerText = selectedSeatsCount;
