@@ -80,7 +80,7 @@ body {
   justify-content: space-between;
 }
 
-.showcase .list {
+.showcase li {
   display: flex;
   align-items: center;
   justify-content: center;
