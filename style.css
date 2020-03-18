@@ -6,6 +6,9 @@
 
 html {
   background-color: hsl(0, 0%, 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 body {
@@ -18,14 +21,14 @@ body {
   justify-content: center;
   /* margin: auto; */
   margin: 2em auto auto auto;
-  max-width: 80vw;
+  max-width: 50vw;
   border: 0;
   height: 80vh;
-  color: rgb(203, 207, 209);
+  color: hsl(200, 6%, 81%);
 }
 
 body a {
-  color: #b9c8d5;
+  color: hsl(208, 25%, 78%);
 }
 
 body li {
@@ -38,7 +41,7 @@ body li {
 }
 
 body li:hover {
-  color: #f4f4f4;
+  /* color: hsl(0, 0%, 96%); */
   transform: scale(1.1);
 }
 
@@ -46,4 +49,28 @@ body li:hover {
   width: 70%;
   text-align: center;
   line-height: 1.5em;
+}
+
+@media (max-width: 600px) {
+  html {
+    background-color: hsl(0, 0%, 0%);
+    display: flex;
+    padding: 2em;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  body {
+    display: flex;
+    font-size: 14px;
+    max-width: 90vw;
+    padding: 0;
+    /* margin: auto; */
+  }
 }
