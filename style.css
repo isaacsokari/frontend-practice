@@ -4,7 +4,13 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: hsl(0, 0%, 0%);
+}
+
 body {
+  background-color: hsla(202, 97%, 39%, 0.6);
+  border-radius: 50px;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
@@ -13,18 +19,31 @@ body {
   /* margin: auto; */
   margin: 2em auto auto auto;
   max-width: 80vw;
-  border: 1px dashed;
-  height: auto;
+  border: 0;
+  height: 80vh;
+  color: rgb(203, 207, 209);
 }
 
 body a {
-  color: hsla(209, 74%, 33%, 0.856);
+  color: #b9c8d5;
 }
 
 body li {
   list-style-type: none;
   text-align: center;
   margin: auto;
+  padding: 5px;
   position: relative;
   right: 1em;
+}
+
+body li:hover {
+  color: #f4f4f4;
+  transform: scale(1.1);
+}
+
+#intro {
+  width: 70%;
+  text-align: center;
+  line-height: 1.5em;
 }
