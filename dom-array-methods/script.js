@@ -55,10 +55,14 @@ function getTotal() {
   const wealth = data.reduce((acc, user) => (acc += user.money), 0);
 
   const wealthEl = document.createElement("div");
+  wealthEl.setAttribute("id", "total");
   wealthEl.innerHTML = `<h3>Total Wealth: <strong>${formatMoney(
     wealth
   )}</strong></h3>`;
-  main.appendChild(wealthEl);
+
+  if (main.lastChild.id !== "total") {
+    main.appendChild(wealthEl);
+  }
 }
 
 // add new object to data array
