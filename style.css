@@ -13,17 +13,17 @@ html {
 
 body {
   background-color: hsla(202, 97%, 39%, 0.6);
-  border-radius: 50px;
+  border-radius: 30px;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* margin: auto; */
-  margin: 2em auto auto auto;
-  max-width: 50vw;
+  /* margin: 2em auto auto auto; */
+  max-width: 50%;
   border: 0;
-  height: 80vh;
+  height: 80%;
   color: hsl(200, 6%, 81%);
 }
 
@@ -42,16 +42,17 @@ body li {
 
 body li:hover {
   /* color: hsl(0, 0%, 96%); */
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 #intro {
   width: 70%;
+  margin-top: 0;
   text-align: center;
   line-height: 1.5em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   html {
     background-color: hsl(0, 0%, 0%);
     display: flex;
@@ -62,15 +63,24 @@ body li:hover {
 
   h1 {
     font-size: 24px;
+    margin-bottom: auto;
   }
+
   h2 {
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 0.5em;
   }
+
   body {
     display: flex;
     font-size: 14px;
     max-width: 90vw;
     padding: 0;
     /* margin: auto; */
+  }
+
+  ul {
+    margin-top: 0.5em;
+    padding-top: 0%;
   }
 }
