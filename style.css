@@ -45,6 +45,14 @@ body li:hover {
   transform: scale(1.05);
 }
 
+body li a {
+  text-decoration: none;
+}
+
+body li a:hover {
+  text-decoration: underline;
+}
+
 #intro {
   width: 70%;
   margin-top: 0;
