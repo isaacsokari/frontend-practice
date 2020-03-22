@@ -38,13 +38,11 @@ body li {
   padding: 5px;
   position: relative;
   right: 1em;
-  text-decoration: none;
 }
 
 body li:hover {
   /* color: hsl(0, 0%, 96%); */
   transform: scale(1.05);
-  text-decoration: underline;
 }
 
 body li a {
