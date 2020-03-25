@@ -27,6 +27,10 @@ body {
   color: hsl(200, 6%, 81%);
 }
 
+body h1:first-of-type {
+  margin-top: 1em;
+}
+
 body a {
   color: hsl(208, 25%, 78%);
 }
@@ -51,6 +55,10 @@ body li a {
 
 body li a:hover {
   text-decoration: underline;
+}
+
+body li:last-of-type {
+  margin-bottom: 2em;
 }
 
 #intro {
