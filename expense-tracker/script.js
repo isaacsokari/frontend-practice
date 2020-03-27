@@ -89,8 +89,11 @@ function updateValues() {
       amounts.filter(a => a < 0).reduce((a, b) => a + b, 0)
     ).toFixed(2);
 
+  // get sign
+  const sign = total < 0 ? "-" : "+";
+
   // update balance
-  balance.innerText = `N${formatMoney(total)})`;
+  balance.innerText = `${sign}N${formatMoney(Math.abs(total))}`;
 
   // update income
   money_plus.innerText = `+N${formatMoney(income)}`;
