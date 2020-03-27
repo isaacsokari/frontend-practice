@@ -90,7 +90,7 @@ function updateValues() {
     ).toFixed(2);
 
   // get sign
-  const sign = total < 0 ? "-" : "+";
+  const sign = total < 0 ? "-" : "";
 
   // update balance
   balance.innerText = `${sign}N${formatMoney(Math.abs(total))}`;
