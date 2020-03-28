@@ -7,6 +7,8 @@ const finalMessage = document.getElementById("final-message");
 
 const figureParts = document.querySelectorAll(".figure-part");
 
+let words = ['apples', 'oranges', 'bananas', 'people', 'toys', 'programming', 'frontend'];
+
 let words = [
   "apples",
   "oranges",
