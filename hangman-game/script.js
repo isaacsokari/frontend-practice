@@ -7,8 +7,6 @@ const finalMessage = document.getElementById("final-message");
 
 const figureParts = document.querySelectorAll(".figure-part");
 
-window.addEventListener("click", window.focus().click());
-
 let words = [
   "apples",
   "oranges",
@@ -124,3 +122,6 @@ playAgainBtn.addEventListener("click", () => {
 });
 
 displayWord();
+
+// enable mobile keyboards
+wordEl.addEventListener("click", wordEl.focus());
