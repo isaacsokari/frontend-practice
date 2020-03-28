@@ -6,15 +6,18 @@ const notification = document.getElementById("notification-container");
 const finalMessage = document.getElementById("final-message");
 
 const figureParts = document.querySelectorAll(".figure-part");
-const target = document.getElementsByTagName('input')[0];
 
-if (event.target !== target) {
-  target.focus();
-  target.click();
-}
+window.addEventListener("click", window.focus().click());
 
-let words = ['apples', 'oranges', 'bananas', 'people', 'toys', 'programming', 'frontend'];
-
+let words = [
+  "apples",
+  "oranges",
+  "bananas",
+  "people",
+  "toys",
+  "programming",
+  "frontend"
+];
 
 console.log(words);
 
