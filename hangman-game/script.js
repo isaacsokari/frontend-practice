@@ -7,8 +7,6 @@ const finalMessage = document.getElementById("final-message");
 
 const figureParts = document.querySelectorAll(".figure-part");
 
-let words = ['apples', 'oranges', 'bananas', 'people', 'toys', 'programming', 'frontend'];
-
 let words = [
   "apples",
   "oranges",
@@ -126,4 +124,4 @@ playAgainBtn.addEventListener("click", () => {
 displayWord();
 
 // enable mobile keyboards
-wordEl.addEventListener("click", wordEl.focus());
+// wordEl.addEventListener("click", wordEl.focus());
