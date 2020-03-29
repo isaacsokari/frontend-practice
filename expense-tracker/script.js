@@ -68,7 +68,7 @@ function addTransactionDOM(transaction) {
 
   item.innerHTML = `
     ${transaction.text} <span>${sign}N${formatMoney(
-    Math.abs(transaction.amount)
+    +Math.abs(transaction.amount)
   )}</span> <button class='delete-btn' onclick='deleteTransaction(${
     transaction.id
   })'>x</button>

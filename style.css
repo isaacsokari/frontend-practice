@@ -4,15 +4,21 @@
   box-sizing: border-box;
 }
 
-html {
-  background-color: hsl(0, 0%, 0%);
+
+
+body {
+  background-color: hsla(240, 40%, 6%, 0.822);
+  height: 100%;
+  width: 100%;
+  position: relative;
   display: flex;
+  /* place-content: center;
+  place-items: center; */
   align-items: center;
   justify-content: center;
 }
 
-body {
-  background-color: hsla(202, 97%, 39%, 0.6);
+.container {
   border-radius: 30px;
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -21,21 +27,22 @@ body {
   justify-content: center;
   /* margin: auto; */
   /* margin: 2em auto auto auto; */
-  max-width: 50%;
+  max-width: 80%;
+  max-height: 90%;
   border: 0;
-  height: 80%;
+  /* height: 80%; */
   color: hsl(200, 6%, 81%);
 }
 
-body h1:first-of-type {
+.container h1:first-of-type {
   margin-top: 1em;
 }
 
-body a {
+.container a {
   color: hsl(208, 25%, 78%);
 }
 
-body li {
+.container li {
   list-style-type: none;
   text-align: center;
   margin: auto;
@@ -44,20 +51,20 @@ body li {
   right: 1em;
 }
 
-body li:hover {
+.container li:hover {
   /* color: hsl(0, 0%, 96%); */
   transform: scale(1.05);
 }
 
-body li a {
+.container li a {
   text-decoration: none;
 }
 
-body li a:hover {
+.container li a:hover {
   text-decoration: underline;
 }
 
-body li:last-of-type {
+.container li:last-of-type {
   margin-bottom: 2em;
 }
 
@@ -69,10 +76,10 @@ body li:last-of-type {
 }
 
 @media (max-width: 800px) {
-  html {
-    background-color: hsl(0, 0%, 0%);
+  body {
+    font-size: 14px;
+    max-width: 90vw;
     display: flex;
-    padding: 2em;
     align-items: center;
     justify-content: center;
   }
@@ -85,14 +92,6 @@ body li:last-of-type {
   h2 {
     font-size: 18px;
     margin-top: 0.5em;
-  }
-
-  body {
-    display: flex;
-    font-size: 14px;
-    max-width: 90vw;
-    padding: 0;
-    /* margin: auto; */
   }
 
   ul {

@@ -124,4 +124,4 @@ playAgainBtn.addEventListener("click", () => {
 displayWord();
 
 // enable mobile keyboards
-// wordEl.addEventListener("click", wordEl.focus());
+wordEl.addEventListener("click", e => {console.log('yes')});
