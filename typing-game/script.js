@@ -102,7 +102,7 @@ function endGame() {
 startBtn.addEventListener("click", startGame);
 
 text.addEventListener("input", (e) => {
-  const insertedText = e.target.value.toLowerCase();
+  const insertedText = e.target.value.toLowerCase().trim();
 
   if (insertedText === randomWord) {
     // clear input and add word to DOM
