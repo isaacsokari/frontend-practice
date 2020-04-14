@@ -19,6 +19,13 @@ let words = [
 
 console.log(words);
 
+
+/* async function getWords() {
+  const res = await fetch( "https://random-word-api.herokuapp.com/word?number=15");
+
+  const data = await res.json();
+  data.forEach
+} */
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 const correctLetters = [];
