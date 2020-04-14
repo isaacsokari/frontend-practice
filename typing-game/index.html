@@ -20,13 +20,12 @@
     <div class="settings" id="settings">
       <form id="settings-form">
         <div>
-          <label for="difficulty">
-            <select id="difficulty">
-              <option value="easy">Easy</option>
-              <option value="medium">Medium</option>
-              <option value="hard">hard</option>
-            </select>
-          </label>
+          <label for="difficulty"> Difficulty: </label>
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
         </div>
       </form>
     </div>
@@ -39,12 +38,12 @@
         type="text"
         id="text"
         autocomplete="off"
-        placeholder="type the word here"
+        placeholder="Type the word here"
       />
 
       <p class="time-container">Time left: <span id="time">10s</span></p>
 
-      <p class="time-container">Score: <span id="score">0</span></p>
+      <p class="score-container">Score: <span id="score">0</span></p>
 
       <div id="end-game-container" class="end-game-container"></div>
     </div>
