@@ -51,6 +51,7 @@ difficultySelect.value = difficulty;
 // start game
 function startGame() {
   startGameEl.style.display = "none";
+  settings.classList.contains("hide") ? true : settings.classList.add("hide");
   // focus on text on start
   text.focus();
 
@@ -132,4 +133,3 @@ settingsForm.addEventListener("change", (e) => {
   localStorage.setItem("difficulty", difficulty);
   settings.classList.toggle("hide");
 });
-
