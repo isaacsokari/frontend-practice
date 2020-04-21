@@ -72,7 +72,59 @@ function createBox(item) {
    <p class = 'info'>${text}</p> 
   `;
 
-  // @todo click event
+  // speak event
+  box.addEventListener("click", () => {
+    setTextMessage(text);
+    speakText();
+
+    // add active class effect
+    box.classList.add("active");
+    setTimeout(() => box.classList.remove("active"), 800);
+  });
 
   main.appendChild(box);
 }
+
+// init speech synth utterance
+const message = new SpeechSynthesisUtterance();
+
+// create voices array
+let voices = [];
+
+function getVoices() {
+  voices = speechSynthesis.getVoices();
+
+  voices.forEach((voice) => {
+    const option = document.createElement("option");
+
+    option.value = voice.name;
+    option.innerText = `${voice.name} ${voice.lang}`;
+
+    voicesSelect.appendChild(option);
+  });
+}
+
+// Set text
+function setTextMessage(text) {
+  message.text = text;
+}
+
+// speak text
+function speakText() {
+  speechSynthesis.speak(message);
+}
+
+// changed voices
+speechSynthesis.addEventListener("voiceschanged", getVoices);
+
+// toggle text box
+toggleBtn.addEventListener("click", () =>
+  document.getElementById("text-box").classList.toggle("show")
+);
+
+// remove text box
+closeBtn.addEventListener("click", () =>
+  document.getElementById("text-box").classList.remove("show")
+);
+
+getVoices();
