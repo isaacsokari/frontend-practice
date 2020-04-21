@@ -94,7 +94,7 @@ h1 button {
 }
 
 .card.show-answer .inner-card {
-  transform: rotateX("180deg");
+  transform: rotateX(180deg);
 }
 
 .inner-card-front,
@@ -112,12 +112,12 @@ h1 button {
 }
 
 .inner-card-front {
-  transition: rotateX(0deg);
+  transform: rotateX(0deg);
   z-index: 2;
 }
 
 .inner-card-back {
-  transition: rotateX(180deg);
+  transform: rotateX(180deg);
 }
 
 .inner-card-front::after,
