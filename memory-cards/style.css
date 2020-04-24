@@ -187,3 +187,24 @@ h1 button {
   min-width: 500px;
   max-width: 100%;
 }
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(100%, 0);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* @todo add delete btn function in js */
+/* .card:hover .delete-btn {
+  opacity: 1;
+} */

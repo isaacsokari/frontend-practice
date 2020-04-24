@@ -60,7 +60,8 @@ function createCard(data, index) {
           ${data.answer}
         </p>
       </div>
-    </div>
+      </div>
+      <button class='delete-btn' onclick='() => {console.log(this)}'>X</button>
   `;
 
   card.addEventListener("click", () => card.classList.toggle("show-answer"));
@@ -89,6 +90,12 @@ function setCardsData(data) {
   localStorage.setItem('cards', JSON.stringify(data));
   window.location.reload();
 }
+
+// @todo delete individual cards
+/* function deleteCard(currentActiveCard) {
+
+} */
+
 
 createCards();
 
