@@ -7,7 +7,7 @@ const totalTime = 7500,
   holdTime = totalTime * 0.2;
 
 // initial text
-text.innerHTML = "<button onclick='start()'>Click Here to Start.</button>";
+text.innerHTML = "<button onclick='start()' style='z-index:3'>Click Here to Start.</button>";
 
 function breatheAnimation() {
   text.innerText = "breathe in";
