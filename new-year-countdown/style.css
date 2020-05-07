@@ -20,7 +20,8 @@ body {
   justify-content: center;
   text-align: center;
   margin: 0;
-  overflow: hidden;
+  /* overflow: ; */
+  /* overscroll-behavior-y: none; */
   position: relative;
 }
 
