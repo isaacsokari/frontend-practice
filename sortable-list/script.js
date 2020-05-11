@@ -1,5 +1,5 @@
 const draggableList = document.getElementById("draggable-list");
-const check = document.getElementById("check");
+const checkBtn = document.getElementById("check");
 
 const richestPeople = [
   "Jeff Bezos",
@@ -75,6 +75,7 @@ function drop() {
   this.classList.remove("over");
 }
 
+// swap list items by drag and drop
 function swapItems(fromIndex, toIndex) {
   const itemOne = listItems[fromIndex].querySelector(".draggable");
   const itemTwo = listItems[toIndex].querySelector(".draggable");
@@ -83,6 +84,21 @@ function swapItems(fromIndex, toIndex) {
   listItems[toIndex].appendChild(itemOne);
 }
 
+// check list items order
+function checkOrder() {
+  listItems.forEach((listItem, index) => {
+    const personName = listItem.querySelector(".draggable").innerText.trim();
+
+    if (personName !== richestPeople[index]) {
+      listItem.classList.add('wrong');
+    } else {
+      listItem.classList.remove('wrong');
+      listItem.classList.add('right');
+    }
+  });
+}
+
+// add event listener to list items
 function addEventListeners() {
   const draggables = document.querySelectorAll(".draggable");
   const dragListItems = document.querySelectorAll(".draggable-list li");
@@ -98,3 +114,6 @@ function addEventListeners() {
     item.addEventListener("dragleave", dragLeave);
   });
 }
+
+// button event listener
+checkBtn.addEventListener("click", checkOrder);
