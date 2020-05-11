@@ -16,6 +16,7 @@ canvas {
   background: #f0f0f0;
   display: block;
   border-radius: 5px;
+  margin-top: 1rem;
 }
 
 h1 {
