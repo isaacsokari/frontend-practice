@@ -88,16 +88,67 @@ function drawBricks() {
   });
 }
 
+// move paddle on canvas
+function movePaddle() {
+  paddle.x += paddle.dx;
+
+  // detect walls
+  if (paddle.x + paddle.w > canvas.width) {
+    paddle.x = canvas.width - paddle.w;
+  }
+
+  if (paddle.x < 0) {
+    paddle.x = 0;
+  }
+}
+
 // draw all items  on canvas
 function draw() {
+  // clear canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
   drawBall();
   drawPaddle();
   drawScore();
   drawBricks();
 }
 
-draw();
-f;
+function update() {
+  movePaddle();
+
+  // draw all items  on canvas
+  draw();
+
+  requestAnimationFrame(update);
+}
+
+update();
+
+// keydown event function
+function keyDown(e) {
+  if (e.key === "ArrowRight" || e.key === "Right") {
+    paddle.dx = paddle.speed;
+  } else if (e.key === "ArrowLeft" || e.key === "Left") {
+    paddle.dx = -paddle.speed;
+  }
+}
+
+// keydown event function
+function keyUp(e) {
+  if (
+    e.key === "ArrowRight" ||
+    e.key === "Right" ||
+    e.key === "ArrowLeft" ||
+    e.key === "Left"
+  ) {
+    paddle.dx = 0;
+  }
+}
+
+// keyboard event listeners
+document.addEventListener("keydown", keyDown);
+document.addEventListener("keyup", keyUp);
+
 // show and hide rules
 rulesBtn.addEventListener("click", () => {
   rules.classList.add("show");
