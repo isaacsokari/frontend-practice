@@ -39,7 +39,7 @@ function addTransaction(e) {
     }
 
     transactions.push(transaction);
-    console.log(transactions);
+    // console.log(transactions);
     addTransactionDOM(transaction);
 
     updateValues();
