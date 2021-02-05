@@ -6,6 +6,7 @@
 }
 html {
   height: max-content;
+  overflow-x: hidden;
 }
 
 body {
@@ -18,21 +19,16 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: 'Lato', sans-serif;
-  overflow-x: hidden;
 }
 
 h1 {
   position: relative;
-  margin: 2rem auto 4rem;
+  margin: 2rem auto;
 }
 
-h1 button {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  /* right: 0; */
-  transform: translate(-50%, 150%);
-  z-index: 2;
+h1 + button.btn {
+  margin-top: unset;
+  margin: 0 auto 1rem;
 }
 
 p {
@@ -68,9 +64,9 @@ p.empty-message + .btn {
 
 .clear {
   /* position: absolute; */
-  margin: auto;
+  margin: 1rem auto;
   /* bottom: 30px; */
-  left: 30px;
+  /* left: 30px; */
 }
 
 .cards {
@@ -79,6 +75,7 @@ p.empty-message + .btn {
   height: 300px;
   width: 500px;
   max-width: 90%;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
 }
@@ -182,13 +179,12 @@ p.empty-message + .btn {
   justify-content: center;
   padding: 10px 0;
   position: absolute;
-  /* top: 0;
-  bottom: 0; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: 100vh;
   min-width: 300px;
-  max-width: 90%;
+  width: 100vw;
   z-index: -1;
   transition: 0.3s ease;
 }
@@ -199,7 +195,6 @@ p.empty-message + .btn {
 }
 
 #hide {
-  /* float: right; */
   position: absolute;
   top: -0.5rem;
   right: 0.5rem;
@@ -236,7 +231,7 @@ p.empty-message + .btn {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(100%, 0);
+  transform: translate(0%, -100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }

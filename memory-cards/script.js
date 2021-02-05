@@ -74,8 +74,8 @@ function createCard(data, index) {
         </p>
       </div>
       </div>
-      <button class='delete-btn' onclick='() => {console.log(this)}'>X</button>
-  `;
+      `;
+  // <button class='delete-btn' onclick='() => {console.log(this)}'><i class="fas fa-times fa-2x"></i></button>
 
   card.addEventListener('click', () => card.classList.toggle('show-answer'));
 
