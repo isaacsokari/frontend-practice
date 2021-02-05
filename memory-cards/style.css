@@ -2,6 +2,10 @@
 
 * {
   box-sizing: border-box;
+  max-width: 100%;
+}
+html {
+  height: max-content;
 }
 
 body {
@@ -13,18 +17,34 @@ body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
   position: relative;
+  margin: 2rem auto 4rem;
 }
 
 h1 button {
   position: absolute;
-  right: 0;
-  transform: translate(120%, -50%);
+  bottom: 0;
+  left: 50%;
+  /* right: 0; */
+  transform: translate(-50%, 150%);
   z-index: 2;
+}
+
+p {
+  text-align: center;
+}
+
+p.empty-message {
+  margin: 4rem auto 1rem;
+}
+
+p.empty-message + .btn {
+  align-self: center;
 }
 
 .btn {
@@ -47,8 +67,9 @@ h1 button {
 }
 
 .clear {
-  position: absolute;
-  bottom: 30px;
+  /* position: absolute; */
+  margin: auto;
+  /* bottom: 30px; */
   left: 30px;
 }
 
@@ -57,7 +78,9 @@ h1 button {
   position: relative;
   height: 300px;
   width: 500px;
-  max-width: 100%;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card {
@@ -108,6 +131,7 @@ h1 button {
   justify-content: center;
   height: 100%;
   width: 100%;
+  padding: 1rem;
   background-color: #fff;
 }
 
@@ -122,8 +146,8 @@ h1 button {
 
 .inner-card-front::after,
 .inner-card-back::after {
-  content: "\f021  Flip";
-  font-family: "Font Awesome 5 Free", "Lato", sans-serif;
+  content: '\f021  Flip';
+  font-family: 'Font Awesome 5 Free', 'Lato', sans-serif;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -139,13 +163,13 @@ h1 button {
 
 .navigation .nav-button {
   border: none;
-  background-color:transparent;
+  background-color: transparent;
   cursor: pointer;
   font-size: 16px;
 }
 
 .navigation p {
-  margin: 0 25px;  
+  margin: 0 25px;
 }
 
 .add-container {
@@ -158,9 +182,13 @@ h1 button {
   justify-content: center;
   padding: 10px 0;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
+  /* top: 0;
+  bottom: 0; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+  max-width: 90%;
   z-index: -1;
   transition: 0.3s ease;
 }
@@ -168,6 +196,13 @@ h1 button {
 .add-container.show {
   opacity: 1;
   z-index: 2;
+}
+
+#hide {
+  /* float: right; */
+  position: absolute;
+  top: -0.5rem;
+  right: 0.5rem;
 }
 
 .add-container h3 {
@@ -179,13 +214,15 @@ h1 button {
   margin: 20px 0 10px;
 }
 
-.form-group textarea{
+.form-group input {
   border: 1px solid #aaa;
   border-radius: 3px;
   font-size: 16px;
   padding: 12px;
-  min-width: 500px;
-  max-width: 100%;
+  min-width: 280px;
+  width: 50%;
+  max-width: 90%;
+  margin: auto;
 }
 
 .delete-btn {
