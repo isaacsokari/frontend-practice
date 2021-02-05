@@ -9,6 +9,7 @@ const answerEl = document.getElementById('answer');
 const addCardBtn = document.getElementById('add-card');
 const clearBtn = document.getElementById('clear');
 const addContainer = document.getElementById('add-container');
+const deleteBtn = document.querySelector('.delete-btn');
 
 // track current card
 let currentActiveCard = 0;
@@ -40,7 +41,9 @@ const dummyCardsData = [
 
 // set empty text
 if (!cardsData.length) {
-  [prevBtn, nextBtn, clearBtn].forEach((btn) => (btn.disabled = true));
+  [prevBtn, nextBtn, clearBtn, deleteBtn].forEach(
+    (btn) => (btn.disabled = true)
+  );
   cardsContainer.innerHTML = `
   <p class="empty-message">No Cards Available. <br/> <br/> Please add a card <br/> <br/> or </p>
   <button class="btn">Add Dummy Cards</button>
@@ -73,11 +76,12 @@ function createCard(data, index) {
           ${data.answer}
         </p>
       </div>
-      </div>
-      `;
-  // <button class='delete-btn' onclick='() => {console.log(this)}'><i class="fas fa-times fa-2x"></i></button>
+    </div>
+    `;
 
-  card.addEventListener('click', () => card.classList.toggle('show-answer'));
+  card
+    .querySelector('.inner-card')
+    .addEventListener('click', () => card.classList.toggle('show-answer'));
 
   // add cards to DOM
   cardsEl.push(card);
@@ -105,9 +109,7 @@ function setCardsData(data) {
 }
 
 // @todo delete individual cards
-/* function deleteCard(currentActiveCard) {
-
-} */
+function deleteCard(currentActiveCard) {}
 
 createCards();
 
@@ -173,6 +175,16 @@ addCardBtn.addEventListener('click', () => {
 clearBtn.addEventListener('click', () => {
   localStorage.clear();
   location.reload();
+});
+
+// delete active card
+
+deleteBtn.addEventListener('click', (e) => {
+  // console.log(cardsData[currentActiveCard]);
+  newCardsData = cardsData.filter(
+    (card) => card.question !== cardsData[currentActiveCard].question
+  );
+  setCardsData(newCardsData);
 });
 
 if (!cardsData.length) {

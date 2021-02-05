@@ -223,20 +223,11 @@ p.empty-message + .btn {
 .delete-btn {
   cursor: pointer;
   background-color: #e74c3c;
-  border: 0;
+  border: 1px solid #e74c3c;
   color: #fff;
-  font-size: 20px;
-  line-height: 20px;
-  padding: 2px 5px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(0%, -100%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  margin-left: 1rem;
 }
 
-/* @todo add delete btn function in js */
-/* .card:hover .delete-btn {
-  opacity: 1;
-} */
+.delete-btn:disabled {
+  opacity: 0.5;
+}
