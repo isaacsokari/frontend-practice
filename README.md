@@ -1,2 +1,2 @@
 # Frontend Practice Projects
-This is a repository for the frontend projects done during the Udemy course '20 Web Projects with Vanilla Javascript' by Brad Traversy.
+This is a repository for the frontend projects done while practicing HTML/CSS/JS.
